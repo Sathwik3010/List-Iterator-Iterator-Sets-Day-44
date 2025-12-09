@@ -1,0 +1,117 @@
+Iterators
+----------
+we can use iterator to get Objects one by one from any collection Object.
+we can apply iterator concept for any collection Object and it is a universal cursor.
+while iterating the objects by iterator we can perform both read and remove operations.
+
+we can get iterator Object by using iteraror method collection interface.
+public Iterator iterator();
+
+Iterator itr = c.iterator();
+
+iterator interface defines the following
+-----------------------------------------
+
+1. public boolea hasNext();
+public Object next();
+public void remove();
+
+limitations
+-----------
+Both enumeration and iterator are single direction cursor only. that is we can always move only forward direction and we can't move to the
+backward direction.
+
+2.while iterating by using iterator we can perform only read and remove operations and we can't perform replacement and addition of new Objects.
+
+3. to over come these limitations we should go for ListIterator.
+
+ListIterator
+------------
+1. List Iterator is the child interface of Iterator.
+2. by using listIterator we can move to either forward direction or backward direction that is bi-directional cursor.
+3. while iterating by listIterator we can perform replacement and addition of new Objects in addition to read and remove operations.
+
+by using ListIterator method we can create listiterator Object.
+
+ListIterator itr = l.listIterator();
+l is any List Object.
+
+methods
+--------
+Boolean hasNext();
+Object next();
+int nextIndex();
+Boolean hasPrevious();
+Object previous();
+int previousIndex();
+void remove();
+void set(Object new);
+void add(Object new);
+
+Set
+---
+1. it was introduced in JDK1.2 version
+2. it is not index based, it is able to manage all elements as per their hashcode values.
+3. it doesn't follow the insertion order.
+Note: LinkedHashSet is able to follow insertion order.
+4.it doesn't follow Sorting order.
+Note: SortedSet, NavigatableSet and TreeSet follows Sorting Order.
+5. it allows Heterogeneous elements.
+Note: SortedSet, NavigableSet, and TreeSet are allowing only homogeneous elements.
+6. it doesn't allow duplicate elements.
+7. it allows only one null elements.
+Note: SortedSet, NavigableSet, TreeSet are not allowing even a single null element.
+
+Note: set interface is not having new Methods, it is having all methods which are declared in Collection interface.
+
+HashSet
+--------
+it is not a legacy class
+2. it is an implementation class to Set interface
+3. it is not index based. it is able to manage all elements on the basis of hash elements
+4. it doesn't follow insertion order.
+5. It allows heterogeneous elements.
+6. it doesn't follow sorting order.
+7. it allows only one null element
+8. it doesn't allow duplicate elements.
+9. the default initial capacity of HashSet is 16 elements.
+10. the default fill ration is/ load factor for hashset is 75%
+11. hash set  has a hashtable is an internal data structure.
+12. hashset is suggestable for frequent search operation.
+13. it is not synchronized a collection.
+14. it allows more than 1 thread at a time.
+15. it allows parallel execution over Threads.
+16. it reduces application execution time.
+17. it increases application performance.
+18. it doesn't give guarantee for data consistency.
+19. it is not thread safe.
+
+difference b/w hashSet and LinkedhashSet
+-------------------------------------------
+1. HashSet doesn't follow insertion order
+   LinkedHashSet has following insertion order.
+2. HashTable has the internal datastructure for HashSet
+   HashTable = linkedList is the internal data Structure for LinkedHashSet
+
+TreeSet
+--------
+it was introduced in JDK 1.2 version
+2. it is not a legacy collection.
+3. it is direct implementation class to NavigableSet, where NavigableSet is a child interface to SortedSet, where sortedSet is the child interface to set Interface.
+
+where set interface is the child interface to collection interface, due to this inheritance architecture treeset must provide the implementations for all methods of collection, set, sortedSet, navigableSet interface
+4. it is not index based.
+5. it does not follow insertion order.
+6. it follows sorting order.
+7. it allows only homogenious elements. if we add heterorgenious element then JVM will rise an exception like java.lang.classCastException.
+8. it doesn't allow duplicate elements.
+9. it doesn't allow null elements if we add null elements to the TreeSet then jvm will rise an exception like java.lamf.NullPointerException.
+10. it allows only comparable elements, that is the element implementation java.lang.Comparable interface if we add non comparable elements then jvm will raise an exception like java.lang.classcastException, in this context if we want to avoid java.lang.classcastException then we have to use java.util.comparator.
+11. it's internal data structure is balanced tree.
+13. it is not synchronized a collection.
+14. it allows more than 1 thread at a time.
+15. it allows parallel execution over Threads.
+16. it reduces application execution time.
+17. it increases application performance.
+18. it doesn't give guarantee for data consistency.
+19. it is not thread safe.
