@@ -86,6 +86,7 @@ it is not a legacy class
 18. it doesn't give guarantee for data consistency.
 19. it is not thread safe.
 
+every point is similar to linkedhashset and hashset only 2 differeneces
 difference b/w hashSet and LinkedhashSet
 -------------------------------------------
 1. HashSet doesn't follow insertion order
@@ -115,3 +116,4 @@ where set interface is the child interface to collection interface, due to this 
 17. it increases application performance.
 18. it doesn't give guarantee for data consistency.
 19. it is not thread safe.
+
