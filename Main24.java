@@ -1,0 +1,10 @@
+package com.codegnan.collections;
+
+public class Main24 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
